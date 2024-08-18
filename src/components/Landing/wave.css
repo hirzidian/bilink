@@ -1,0 +1,16 @@
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.wave-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Perluas lebar untuk menciptakan efek gelombang berkelanjutan */
+  animation: wave 5s linear infinite;
+}
