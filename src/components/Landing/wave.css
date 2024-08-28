@@ -1,16 +1,78 @@
-@keyframes wave {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.wave-animation {
+.wave {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 200%; /* Perluas lebar untuk menciptakan efek gelombang berkelanjutan */
-  animation: wave 5s linear infinite;
+  width: 100%;
+  height: 70px;
+  background: url(../../../public/image/wave.png);
+  background-size: 800px 80px;
+  will-change: background-position;
+}
+
+.wave.wave1 {
+  animation: animate 10s linear infinite; /* Durasi lebih panjang untuk membuat animasi lebih smooth */
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.wave.wave2 {
+  animation: animate2 12s linear infinite; /* Durasi lebih panjang untuk membuat animasi lebih smooth */
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -3s; /* Sedikit delay untuk variasi */
+  bottom: 8px;
+}
+
+.wave.wave3 {
+  animation: animate3 9s linear infinite; /* Durasi lebih panjang untuk membuat animasi lebih smooth */
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s; /* Sedikit delay untuk variasi */
+  bottom: 12px;
+}
+
+.wave.wave4 {
+  animation: animate4 14s linear infinite; /* Durasi lebih panjang untuk membuat animasi lebih smooth */
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -4s; /* Sedikit delay untuk variasi */
+  bottom: 15px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 800px; /* Sesuaikan dengan ukuran background */
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 800px; /* Sesuaikan dengan ukuran background */
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 800px; /* Sesuaikan dengan ukuran background */
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 800px; /* Sesuaikan dengan ukuran background */
+  }
 }

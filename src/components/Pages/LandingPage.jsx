@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
+//import component
 import Landing from '../Landing/Landing';
 import Fitur from '../fitur/Fitur';
 import Produk from '../produk/Produk';
 import Footer from '../footer/Footer';
 import Navbar from '../navbar/Navbar';
-import Loading from '../loading/Loading'; // Import komponen Loading
+import Loading from '../loading/Loading';
 
+//loading
 const LandingPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);  //mengecek apakah halaman sedang status "loading" atau tidak
 
-  useEffect(() => {
+  useEffect(() => {               //untuk mengatur waktu per detik
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); 
+    }, 1000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -20,6 +22,8 @@ const LandingPage = () => {
   if (isLoading) {
     return <Loading />; 
   }
+
+  //end loading
 
   return (
     <div>
